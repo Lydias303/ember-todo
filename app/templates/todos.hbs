@@ -27,7 +27,7 @@ action="createTodo"
   <span id="todo-count">
     <strong>{{remaining}}</strong> {{inflection}} left
   </span>
-  <button id="clear-completed" {{action "clearCompleted"}}>
+  <button class="btn btn-danger" id="clear-completed" {{action "clearCompleted"}}>
     Clear Completed ({{completed}})
   </button>
   {{#if hasCompleted}}
