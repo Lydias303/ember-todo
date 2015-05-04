@@ -1,4 +1,4 @@
-<h2 id="title">TODOS</h2>
+<div class="todo-body">
 {{input
 type="text"
 id="new-todo"
@@ -9,7 +9,7 @@ action="createTodo"
 
 <section id="main">
   {{outlet}}
-<input type="checkbox" id="toggle-all">
+  {{ input type="checkbox" id="toggle-all" checked=allAreDone }}
 </section>
 <footer>
   <span id="todo-count">
@@ -35,3 +35,4 @@ action="createTodo"
     </button>
   {{/if}}
 </footer>
+</div>
