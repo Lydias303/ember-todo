@@ -22,5 +22,10 @@ export default Ember.ArrayController.extend({
 
   remaining: function() {
     return this.filterBy('finished', false).get('length');
-  }.property('@each.finished')
+  }.property('@each.finished'),
+
+  inflection: function() {
+    var remaining = this.get('remaining');
+    return remaining === 1 ? 'tasks' : 'task'
+  }.property('remaining')
 });

@@ -10,9 +10,15 @@ action="createTodo"
 <section id="main">
 <ul id="todo-list">
   {{#each todo in model itemController="todo"}}
-  <li {{bind-attr class="todo.finished:isFinished"}}>
+  <li {{bind-attr class="todo.finished:isFinished todo.isEditing:editing"}}>
+    {{#if todo.isEditing}}
+      <input class="edit">
+    {{else}}
+
+    {{/if}}
+
     {{input type="checkbox" class="toggle" checked=todo.finished }}
-    <label>{{todo.title}}</label><button class="destroy">GET OUTTA HERE!</button>
+    <label {{action "editTodo" on="doubleClick" }}>{{todo.title}}</label><button class="destroy">GET OUTTA HERE!</button>
 
   </li>
   {{/each}}
