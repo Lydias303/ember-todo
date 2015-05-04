@@ -1,0 +1,30 @@
+<h2 id="title">Welcome to Ember.js</h2>
+{{input
+type="text"
+id="new-todo"
+place-holder="what needs to be done?"
+value=newTitle
+action="createTodo"
+}}
+
+<section id="main">
+<ul id="todo-list">
+  {{#each todo in model itemController="todo"}}
+  <li {{bind-attr class="todo.finished:isFinished todo.isEditing:editing"}}>
+    {{#if todo.isEditing}}
+      {{edit-todo class="edit" value="todo.title" focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    {{else}}
+
+    {{/if}}
+
+    {{input type="checkbox" class="toggle" checked=todo.finished }}
+    <label {{action "editTodo" on="doubleClick" }}>{{todo.title}}</label><button class="destroy">GET OUTTA HERE!</button>
+
+  </li>
+  {{/each}}
+</ul>
+<input type="checkbox" id="toggle-all">
+</section>
+<footer>
+
+</footer><strong>{{remaining}}</strong> {{inflection}} left
