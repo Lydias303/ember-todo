@@ -15,7 +15,7 @@ action="createTodo"
           {{edit-todo class="edit" value=todo.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
         {{else}}
           {{input type="checkbox" class="toggle" checked=todo.finished }}
-          <label {{action "editTodo" on="doubleClick" }}>{{todo.title}}</label><button class="destroy">GET OUTTA HERE!</button>
+          <label {{action "editTodo" on="doubleClick" }}>{{todo.title}}</label><button {{action "removeTodo"}} class="destroy">GET OUTTA HERE!</button>
         {{/if}}
       </li>
     {{/each}}
