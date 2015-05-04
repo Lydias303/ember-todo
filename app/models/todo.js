@@ -2,7 +2,6 @@ import DS from 'ember-data';
 
 var Todo = DS.Model.extend({
   title: DS.attr('string'),
-  task: DS.attr('string'),
   finished: DS.attr('boolean'),
   priority: DS.attr('boolean')
 });
