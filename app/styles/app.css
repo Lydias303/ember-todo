@@ -1,7 +1,7 @@
 body {
 	background: url('/todo-board.png');
 	background-size: 100%;
-	font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Handlee', cursive;
 	line-height: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
@@ -26,11 +26,10 @@ input[type="checkbox"] {
 #new-todo,
 .edit {
 	position: relative;
-	margin: 0;
 	width: 70%;
 	font-size: 24px;
 	font-family: inherit;
-	line-height: 0;
+	line-height: 24px;
 	border: 0;
 	outline: none;
 	color: inherit;
@@ -53,6 +52,7 @@ input[type="checkbox"] {
 	border: none;
 	background: rgba(161, 186, 228, 0.5);
 	box-shadow: none;
+	margin-top: 50px;
 }
 
 #main {
@@ -68,4 +68,30 @@ input[type="checkbox"] {
 #todo-list {
 	line-height: 2.7em;
 	list-style: none;
+	font-size: 25px;
+}
+
+#filters {
+	font-size: 30px;
+	margin-left: 550px;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin-bottom: 60px;
+}
+
+#filters li a {
+	color: #818684;
+	text-decoration: none;
+	font-weight: bold;
+	margin-bottom: 60px;
+}
+
+#filters li  {
+	list-style: none;
+	display: inline;
+	margin-top: 20px;
+	margin-left: 20px;
 }
